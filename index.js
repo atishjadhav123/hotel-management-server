@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors({
     credentials: true, origin: true,
 }));
-app.use("/uploads", express.static("uploads"))
+// app.use("/uploads", express.static("uploads"))
 
 // API Routes
 app.use("/api/auth", require("./routes/auth.routes"));
