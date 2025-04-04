@@ -11,7 +11,13 @@ app.use(cookieParser());
 app.use(express.static("dist"));
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors({ credentials: true, origin: true }));
+app.use(cors({
+    credentials: true, origin: true,
+    methods: ["GET", "POST", "PUT", "DELETE"], // ✅ Allowed request methods
+    allowedHeaders: ["Content-Type", "Authorization"],
+
+}));
+app.use("/uploads", express.static("uploads"))
 
 // API Routes
 app.use("/api/auth", require("./routes/auth.routes"));
