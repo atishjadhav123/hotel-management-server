@@ -11,7 +11,7 @@ app.use(cookieParser());
 app.use(express.static("dist"));
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
+app.use(cors({ credentials: true, origin: "https://hotel-management-client-cz49.vercel.app" }));
 
 // API Routes
 app.use("/api/auth", require("./routes/auth.routes"));
