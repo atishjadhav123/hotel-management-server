@@ -13,9 +13,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
     credentials: true, origin: true,
-    methods: ["GET", "POST", "PUT", "DELETE"], // ✅ Allowed request methods
-    allowedHeaders: ["Content-Type", "Authorization"],
-
 }));
 app.use("/uploads", express.static("uploads"))
 
